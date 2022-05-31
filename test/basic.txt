@@ -1,0 +1,55 @@
+# Basic string
+
+This is just a load of regular text
+
+==>
+
+Program(String)
+
+# Crazy string
+
+Some_prek9435fgdhu8u9ef894/tji!@£$%^&*())PDLF:LMknjgf9-f0pv
+
+==>
+
+Program(String)
+
+# Url
+
+https://github.com/kogosoftwarellc/open-api/blob/master/packages/openapi-types/index.ts
+
+==>
+
+Program(String)
+
+# Just variable
+
+{variable}
+
+==>
+
+Program(Variable)
+
+# Mixed
+
+https://www.api.com/users/{userId}/posts/{postId}
+
+==>
+
+Program(String, Variable, String, Variable)
+
+# String with curly bracket
+
+https://www.api.com/users/{notAVariable
+
+==>
+
+Program(String, String)
+
+# String with rogue curly brackets and variables
+
+https://www.api.com/users/{notAVariable/{variable}/}notvariable/{v2}
+
+==>
+
+Program(String, String, Variable, String, String, Variable)

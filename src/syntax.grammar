@@ -1,0 +1,28 @@
+@top Program { expression* }
+
+expression {
+  String |
+  Variable 
+}
+
+@precedence { Variable, String }
+
+Variable { startVariable simpleString endVariable }
+String { substring }
+substring { string | stringWithStartVariable | stringWithEndVariable}
+stringWithStartVariable { (startVariable string) | (startVariable simpleString) }
+stringWithEndVariable { (string endVariable) | (simpleString endVariable) }
+
+@tokens {
+  @precedence { startVariable, endVariable, simpleString, string }
+
+  //String
+  string { char+ }
+  char { ![{}] }
+
+  startVariable { "{" }
+  endVariable   { "}" }
+  simpleString { $[a-zA-Z0-9_]+ }
+}
+
+@detectDelim

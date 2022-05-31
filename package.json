@@ -1,0 +1,47 @@
+{
+  "name": "@jsonhero/codemirror-lang-inline-tokens",
+  "version": "0.1.0",
+  "description": "Inline token language support for CodeMirror",
+  "scripts": {
+    "test": "mocha test/test.js",
+    "prepare": "rollup -c"
+  },
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "@codemirror/autocomplete": "^0.20.0",
+    "@codemirror/language": "^0.20.0",
+    "@codemirror/lint": "^0.20.1",
+    "@lezer/highlight": "^0.16.0",
+    "@lezer/lr": "^0.16.0"
+  },
+  "devDependencies": {
+    "@lezer/generator": "^0.16.0",
+    "mocha": "^9.0.1",
+    "rollup": "^2.60.2",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-ts": "^2.0.4",
+    "typescript": "^4.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsonhero-io/codemirror-lang-inline-tokens.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/jsonhero-io/codemirror-lang-inline-tokens/issues"
+  },
+  "homepage": "https://github.com/jsonhero-io/codemirror-lang-inline-tokens",
+  "keywords": [],
+  "author": "Matt Aitken",
+  "license": "MIT"
+}
